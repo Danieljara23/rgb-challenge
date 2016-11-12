@@ -1,3 +1,40 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(48,48,48);
+  color: white;
+  text-align: center;
+}
+.question-container{
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+.option{
+  display: inline-block;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 20px 15px;
+  transition: all 0.45s ease;
+}
+.score{
+  margin: 40px;
+  font-size: 24px;
+}
+.option.scale{
+  transform: scale(46);
+}
+.result span{
+  font-size:50px;
+}
+.result .close{
+  font-size:30px;
+}
+.result{
+  display: none;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
