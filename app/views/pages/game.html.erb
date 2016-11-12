@@ -23,6 +23,7 @@
    </div>
 </div>
 <script type="text/javascript">
+
 	var correct;
 	var score = 0;
 	game();
@@ -31,6 +32,7 @@
 	  guess( $(this));
 	});
 	$('.close').on('click', function(){
+		event.preventDefault(); //Con el anchor recargo toda la página una vez más y esto ocasiona que se vuelva a cargar el script
 	  $('.result').hide();
 	  $('.option').removeClass('scale');
 
@@ -38,7 +40,7 @@
 	});
 
 	function game(){
-	  correct = Math.floor(Math.random() * 2);
+	  correct = Math.floor(Math.random() * 3);
 
 	  $('.option').each( function(index) {
 	    var color = generateColor();
