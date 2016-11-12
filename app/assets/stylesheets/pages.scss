@@ -56,22 +56,40 @@ body{
 	color:white;
 	text-decoration: none;
 }
-input[type=text]{
+input[type=submit]{
+	width: 250px;
+	height: 50px;
+	background: transparent;
+    color: white;
+	font-size: 25px;
+	padding-left: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 4px;
+
+}
+input[type=email]{
 	width: 250px;
 	height: 20px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    border-radius: 4px;
+    color: white;
 	font-size: 18px;
 	padding-left: 14px;
     padding-top: 10px;
     padding-bottom: 10px;
     border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.54);
-    border-radius: 4px;
-    -webkit-transition: width 0.4s ease-in-out;
+	-webkit-transition: width 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-
-input[type=text]:focus {
-    width: 40%;
+input[type=email]:focus {
+    width: 30%;
 }
 form{
 	display: block;

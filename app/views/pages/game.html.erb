@@ -19,12 +19,11 @@
 <div class="result lost">
    <span>Nooooombe</span>
    <h2>Score: <span id="finalScore"></span></h2>
-   <form>
-   	<input type="text" name="email" placeholder="Correo Electrónico">
-   </form>
-   <div class="close">
-       <a href="#">Registra tu puntaje</a>
-   </div>
+   <%= form_for(@competitor) do |competitor| %>
+   	<%= hidden_field_tag 'competitor[score]', 0 ,id: 'hiddenScoreInput' %>
+   	<%= competitor.email_field :email,placeholder: 'Corre electrónico', class: 'email-input' %>
+   	<%= competitor.submit 'Registrar Puntaje', id: 'registerScore' %>
+   <% end %>
    <div class="close">
        <a href="#">Jugar de nuevo</a>
    </div>
@@ -70,6 +69,7 @@
 	    }else{
 	      $('.result.lost').show();
 	      $('#finalScore').text(score);
+	      $('#hiddenScoreInput').val(score);
 	      score = 0;
 	      //alert("Mala");
 	    }
