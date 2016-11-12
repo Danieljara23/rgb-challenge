@@ -18,9 +18,17 @@
 
 <div class="result lost">
    <span>Nooooombe</span>
+   <h2>Score: <span id="finalScore"></span></h2>
+   <form>
+   	<input type="text" name="email" placeholder="Correo Electrónico">
+   </form>
+   <div class="close">
+       <a href="#">Registra tu puntaje</a>
+   </div>
    <div class="close">
        <a href="#">Jugar de nuevo</a>
    </div>
+
 </div>
 <script type="text/javascript">
 
@@ -60,8 +68,9 @@
 	      $('.result.won').show();
 	      //alert("Buena");
 	    }else{
-	      score = 0;
 	      $('.result.lost').show();
+	      $('#finalScore').text(score);
+	      score = 0;
 	      //alert("Mala");
 	    }
 	    $('.score p span').text(score);
