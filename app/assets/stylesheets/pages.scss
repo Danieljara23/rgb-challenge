@@ -112,3 +112,19 @@ form{
 :-ms-input-placeholder {  
    color: white;
 }
+div#playAgainContainer {
+    border: 1px solid white;
+    border-radius: 4px;
+    width: 150px;
+    padding: 4px 4px;
+    margin-left: auto;
+    margin-right: auto;
+    /* color: white; */
+}
+a.play-again {
+    color: white;
+}
+table {
+    margin-right: auto;
+    margin-left: auto;
+}
